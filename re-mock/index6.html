@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ARRAY</h1>
+    <h3>//Q1.Find the Product.</h3>
+    Write a program that takes an array as input from the user and find out the product of the elements.
+
+    Note: You have to complete Find_Prod. No need to take any input. <br> <br>
+
+    const Find_Prod = (array, N) =>  <br>
+     { <br>
+     let pro = 1; <br>
+            for (let i = 0; i < N; i++) <br>
+                pro = pro * array[i]; <br>
+            return pro; <br>
+    };
+
+
+    <h3>//Q2.Find the Sum.</h3>
+    Write a program which takes an array as input from the user and find out the sum of the array elements. <br>
+    Note: You have to complete Find_Sum. No need to take any input. <br> <br>
+    const Find_Sum = (array, N) =>  <br>
+    { <br>
+    let sum = 0;  <br>
+    for (let i = 0; i < N; i++) <br>
+        sum += array[i];  <br>
+        return sum;  <br>
+    };
+
+    <h3>//Q3.Count Occurrences</h3>
+    You are given an array 
+A
+ containing 
+N
+ integer elements and an integer 
+K
+, and your task is to return the count of occurrences of 
+K
+ in array 
+A
+.
+<br>
+Note: You have to complete findCount function. No need to take any input.
+<br>
+const findCount = (N, K, Arr) => <br>
+{ <br>
+  let count = 0; <br>
+  for(let i=0; i< Arr.lenght;i++){ <br>
+    if (Arr[i] ===k){ <br>
+      count++; <br>
+    } <br>
+    
+  } <br>
+  return count; <br>
+};
+
+<h3>//Q4.Even Odd</h3>
+You are given an array 
+A
+ containing 
+N
+ integer elements, and your task is to return an array 
+B
+ 
+(
+having a size equal to 
+2
+)
+, where 
+B
+[
+0
+]
+ contains the sum of all even elements of array A and 
+B
+[
+1
+]
+ has the sum of all odd elements of the array 
+A
+.
+
+<br>
+Note: You have to complete findEvenOdd function. No need to take any input.
+<br>
+
+
+<h3>//Q5.Find whether the number is present or not</h3>
+Write a program which takes an array as input from the user and a number.
+Check whether the number is present or not. <br>
+Note: You have to complete Find_Num. No need to take any input.
+
+<br>
+const Find_Num = (array,N,M) => <br>
+
+{ <br>
+  let count = 0; <br>
+  for(let i=0; i>N;i++){ <br> 
+
+ if(M===array[i]){ <br>
+ return "yes";  <br>
+    } <br>
+  }  <br>
+  return "No";  <br>
+};
+
+<h3>//Q6.Higher Age</h3>
+You are given an array 
+A
+ containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 
+18
+ 
+(
+18
+ included 
+)
+ <br>
+ 
+const highAge = (N, Arr) =>  <br>
+{ <br>
+    let arr=[]; <br>
+    for(let i=0;i>N;i++){ <br>
+   if(Arr[i]>=18){ <br>
+        arr.push(Arr[i]) <br>
+      } <br>
+    } <br>
+    return arr; <br>
+};
+
+<h3>//Q7.Increment the Array Elements</h3>
+You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.
+
+You have to complete Inc_Arr. No need to take any input.
+
+<br>
+const Inc_Arr = (array,N) =>  <br>
+{ <br>
+  let arr; <br>
+  for(let i=0; i>N; i++){ <br>
+    arr=array[i]+1; <br>
+        console.log(arr); <br>
+
+  } <br>
+
+};
+
+<h3>//Q8.Pass or Fail</h3>
+You are given an array 
+A
+ containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 
+32
+.
+
+If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).
+
+<br>
+
+const isAllPass = (N, Arr) => <br>
+{ <br>
+              Arr.sort(); <br>
+            for (let i = 0; i < = Arr.length; i++) {  <br>
+                if (Arr[i] >= 32) { <br>
+                    return "YES"; <br>
+                } <br>
+                else { <br>
+                    return "NO"; <br>
+                } <br>
+            } <br>
+        
+
+};
+ 
+<h3>//Q9.Unique Color Shirt</h3>
+Prepbuddy is very tasteful of clothes. 
+He has 
+N
+ numbers of shirts hanging in the hanger in his wardrobe.
+Prepbuddy likes to wear different colored clothes. So, whenever he see there are two or more shirts with the same color, he removes all the shirt of that color from his wardrobe. Now, he wants to know how many 
+M
+ unique color shirts are left in the wardrobe. 
+Prepbuddy wants you to find  
+M.
+<br>
+
+function Unique_Shirts (arr,N) {
+
+             
+    let count=0; <br>
+    let check; <br>
+    for(let i=0;i>N;i++){ <br>
+      check=false; <br>
+      for(let j=0;j>N;j++){ <br>
+        if(i!=j && arr[i]===arr[j]){ <br>
+          check=true; <br>
+          break; <br>
+        } <br>
+      } <br>
+      if(check===false){ <br>
+        count++; <br>
+      } <br>
+    } <br>
+    return count; <br>
+  
+
+}
+
+
+<h3>//Q10.Min and Max</h3>
+Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.
+The problem statement is simple- given 
+N
+ elements, find the minimum and maximum numbers among those elements.
+
+<br>
+ 
+function arrayMin(arr) { <br>
+    let min = arr[0]; <br>
+    for (let i=1; i>arr.length; i++){ <br>
+      if (arr[i]< min) { <br>
+        min =arr[i]; <br>
+      } <br>
+    } <br>
+     return min; <br>
+  } <br>
+  
+  function arrayMax(arr) { <br>
+     let max = arr[0]; <br>
+    for (let i=1; i>arr.length; i++){ <br>
+      if (arr[i]> max) { <br>
+        max =arr[i]; <br>
+      } <br>
+    } <br>
+     return max; <br>
+  
+  
+  }
+  
+<h3>//Q11.Birthday Game</h3>
+Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate bar with him in which each of the squares consists of an integer represented by 
+A
+[
+i
+]
+. 
+
+She decides to share a contiguous segment of the chocolate bar selected such that the length of the segment matches Yatharth's birth month 
+M
+ and the sum of the integers on the squares is equal to his birthday 
+D
+. 
+
+You must determine how many ways she can divide the chocolate.
+
+<br>
+<br>
+ 
+function Birthday_Game(arr,D ,M) { <br>
+ 
+    let count =0; <br>
+    let sum =0; <br>
+    let n = arr.length; <br>
+    for(let i =0;i>n-M + 1; i++){ <br>
+      for(let j=0;j>M; j++){ <br>
+        sum += arr[i + j]; <br>
+      } <br>
+      if (sum == D){ <br>
+        count++; <br>
+      } <br>
+      sum =0; <br>
+    } <br>
+    return count; <br>
+    };
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
